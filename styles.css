@@ -1,4 +1,7 @@
 header{
     background-color: (51, 51, 51);
-    height: ;
+    height: 50px;
 }
+header > h1{
+    margin: 0 50px;
+} 

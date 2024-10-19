@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>memory game</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+<body>
+<div class="container">
+    <h2 class="heading">Memory Game using JavaScript</h2>
+    <div class="cards">
+      <div class="card" animal="duck">
+        <img src="https://imgkub.com/images/2022/02/16/duck.png" alt="" />
+      </div>
+      <div class="card" animal="lion">
+        <img src="https://imgkub.com/images/2022/02/16/lion.png" alt="" />
+      </div>
+      <div class="card" animal="dog">
+        <img src="https://imgkub.com/images/2022/02/16/dog.png" alt="" />
+      </div>
+      <div class="card" animal="tiger">
+        <img src="https://imgkub.com/images/2022/02/16/tiger.png" alt="" />
+      </div>
+      <div class="card" animal="jaguar">
+        <img src="https://imgkub.com/images/2022/02/16/jaguar.png
+  " alt="" />
+      </div>
+      <div class="card" animal="cat">
+        <img src="https://imgkub.com/images/2022/02/16/cat.png" alt="" />
+      </div>
+      <div class="card" animal="duck">
+        <img src="https://imgkub.com/images/2022/02/16/duck.png" alt="" />
+      </div>
+      <div class="card" animal="dog">
+        <img src="https://imgkub.com/images/2022/02/16/dog.png" alt="" />
+      </div>
+      <div class="card" animal="jaguar">
+        <img src="https://imgkub.com/images/2022/02/16/jaguar.png
+  " alt="" />
+      </div>
+      <div class="card" animal="lion">
+        <img src="https://imgkub.com/images/2022/02/16/lion.png" alt="" />
+      </div>
+      <div class="card" animal="cat">
+        <img src="https://imgkub.com/images/2022/02/16/cat.png" alt="" />
+      </div>
+      <div class="card" animal="snake">
+        <img src="https://imgkub.com/images/2022/02/16/snake.png" alt="" />
+      </div>
+      <div class="card" animal="tiger">
+        <img src="https://imgkub.com/images/2022/02/16/tiger.png" alt="" />
+      </div>
+      <div class="card" animal="panther">
+        <img src="https://imgkub.com/images/2022/02/16/panther.png" alt="" />
+      </div>
+      <div class="card" animal="panther">
+        <img src="https://imgkub.com/images/2022/02/16/panther.png" alt="" />
+      </div>
+      <div class="card" animal="snake">
+        <img src="https://imgkub.com/images/2022/02/16/snake.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <script>
+    let counter = 0;
+let firstSelection = "";
+let secondSelection = "";
+
+const cards = document.querySelectorAll(".cards .card");
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    card.classList.add("clicked");
+
+    if (counter === 0) {
+      firstSelection = card.getAttribute("animal");
+      counter++;
+    } else {
+      secondSelection = card.getAttribute("animal");
+      counter = 0;
+
+      if (firstSelection === secondSelection) {
+        const correctCards = document.querySelectorAll(
+          ".card[animal='" + firstSelection + "']"
+        );
+
+        correctCards[0].classList.add("checked");
+        correctCards[0].classList.remove("clicked");
+        correctCards[1].classList.add("checked");
+        correctCards[1].classList.remove("clicked");
+      } else {
+        const incorrectCards = document.querySelectorAll(".card.clicked");
+
+        incorrectCards[0].classList.add("shake");
+        incorrectCards[1].classList.add("shake");
+
+        setTimeout(() => {
+          incorrectCards[0].classList.remove("shake");
+          incorrectCards[0].classList.remove("clicked");
+          incorrectCards[1].classList.remove("shake");
+          incorrectCards[1].classList.remove("clicked");
+        }, 800);
+      }
+    }
+  });
+});
+  </script>
+</body>
+</html>
+  <!-- Download all Images- https://bit.ly/memory-game-images -->

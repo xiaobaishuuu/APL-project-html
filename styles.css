@@ -13,3 +13,11 @@ header > h1{
     color: rgb(255, 255, 255);
     line-height: 70px;
 }
+table{
+    width: 50%;
+}
+table td div{
+    background-color:#dddddd;
+    height: 150px;
+    margin: 5px;
+}

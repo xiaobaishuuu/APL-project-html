@@ -5,6 +5,16 @@
 button{
   margin: 20px;
 }
+
+.cards-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2em;
+}
+
+.card{
+  display: grid;
+}
 /* .button-81 {
   background-color: #fff;
   border: 0 solid #e2e8f0;

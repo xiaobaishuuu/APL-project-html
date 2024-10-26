@@ -36,35 +36,43 @@ class ChoiceDifficult extends React.Component{
 }
 
 class Card extends React.Component{
-    // state = {
-    //     click:false
-    // }
-    // filpCard = () =>{
-
-    // }
+    state = {content:this.props.emoji}
+    filpCard = () =>{
+        this.state.content = !this.state.content
+    }
     render(){
-        return (<div>
-                    <span>{this.props.emoji}</span>
+        return (<div className="card" onClick={this.filpCard}>
+                    <span >{this.props.emoji}</span>
                 </div>)
     }
 }
 
 export default class Game extends React.Component{
-    state = {card:[]}
+    state = {card:[],
+            clickOne: null,
+            clickTwo: null
+    }
+
+    checkCard = () =>{
+        let {clickOne,clickTwo} = this.state
+        if (clickOne == clickTwo){
+            [clickOne,clickTwo] = null
+            // console.log(clickOne.clickTwo)
+        }
+    }
 
     diffcultGetter = (column) =>{
         let newState = {card:[]}
         for (let i = 0; i < column*2; i++) {
             newState.card.push({id:nanoid(),emoji:String.fromCodePoint(0x1f601 + i)})
+            newState.card.push({id:nanoid(),emoji:String.fromCodePoint(0x1f601 + i)})
         }
-        console.log(newState.card)
         this.setState(newState)
     }
-
     render(){
         return (<main>
                     <ChoiceDifficult diffcult={this.diffcultGetter}/>
-                    <div className="container">{
+                    <div className="cards-container">{
                         this.state.card.map(card =>{
                             return <Card key={card.id} {...card}/>
                         })}

@@ -13,7 +13,11 @@ button{
 }
 
 .card{
+  height: 20px;
+  width: 30px;
   display: grid;
+  background-color: bisque;
+  /* text-align: center; */
 }
 /* .button-81 {
   background-color: #fff;

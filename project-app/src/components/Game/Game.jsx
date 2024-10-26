@@ -36,13 +36,13 @@ class ChoiceDifficult extends React.Component{
 }
 
 class Card extends React.Component{
-    state = {content:this.props.emoji}
+    state = {show:false}
     filpCard = () =>{
-        this.state.content = !this.state.content
+        this.setState({show:!this.state.show})
     }
     render(){
         return (<div className="card" onClick={this.filpCard}>
-                    <span >{this.props.emoji}</span>
+                    <span>{this.state.show? this.props.emoji:''}</span>
                 </div>)
     }
 }

@@ -1,30 +1,47 @@
-/* <!-- HTML !--> */
-/* <button class="button-81" role="button">Button 81</button> */
-
-/* CSS */
-button{
-  margin: 20px;
+main{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 5px rgb(0,0,0);
+  width: 1000px;
+  margin: 20px auto;
+  padding: 0 0 20px;
+  overflow: hidden;
 }
-
+.choiceDifficult{
+  text-align: center;
+  margin: 20px auto;
+}
 .cards-container{
+  width: 700px;
   margin: auto;
-  width: 1100px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 1em;
   column-gap: 1em;
 }
-
 .card{
-  width: 160px;
-  height: 100px;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 30px;
   display: grid;
   background-color: rgb(175, 175, 175);
   text-align: center;
   font-size: 80px;
-  padding: 50px;
+  transform-style: preserve-3d;  /*設置3D 卡牌旋轉可見*/
+  transition: background-color 0.4s ease,transform 0.7s /*css過渡效果*/
 }
-/* .button-81 {
+.card-back {
+  backface-visibility: hidden; /*設置cardback為隱藏，否則一樣内容*/
+  transform: rotateY(180deg);  /*默認反轉卡牌*/
+}
+.flipped {
+  transform: rotateY(180deg);  /*反轉卡牌*/
+  opacity: 1;
+  background-color: orange;
+}
+.matched {
+  background-color: greenyellow;
+}
+button{
   background-color: #fff;
   border: 0 solid #e2e8f0;
   border-radius: 1.5rem;
@@ -47,14 +64,14 @@ button{
   touch-action: manipulation;
 }
 
-.button-81:hover {
+button:hover {
   background-color: #1e293b;
   color: #fff;
 }
 
 @media (min-width: 768px) {
-  .button-81 {
+  button {
     font-size: 1.125rem;
     padding: 1rem 2rem;
   }
-} */
+}

@@ -1,77 +1,69 @@
-main{
+main {
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 5px rgb(0,0,0);
-  width: 1000px;
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+  width: 60%;
   margin: 20px auto;
   padding: 0 0 20px;
   overflow: hidden;
 }
-.choiceDifficult{
+
+.choiceDifficult {
   text-align: center;
   margin: 20px auto;
 }
-.cards-container{
-  width: 700px;
+
+.cards-container {
+  width: 70%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  row-gap: 1em;
-  column-gap: 1em;
+  row-gap: 20px;
+  column-gap: 20px;
 }
-.card{
-  height: 150px;
-  line-height: 150px;
+
+.card {
+  width: 100%;
+  aspect-ratio: 1;
   border-radius: 30px;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(175, 175, 175);
-  text-align: center;
-  font-size: 80px;
-  transform-style: preserve-3d;  /*設置3D 卡牌旋轉可見*/
-  transition: background-color 0.4s ease,transform 0.7s /*css過渡效果*/
+  font-size: 5cqw;
+  transform-style: preserve-3d; /* 设置3D卡牌旋转可见 */
+  transition: background-color 0.5s ease, transform 0.7s; /* CSS过渡效果 */
 }
+
 .card-back {
   backface-visibility: hidden; /*設置cardback為隱藏，否則一樣内容*/
   transform: rotateY(180deg);  /*默認反轉卡牌*/
 }
+
 .flipped {
   transform: rotateY(180deg);  /*反轉卡牌*/
   opacity: 1;
   background-color: orange;
 }
+
 .matched {
   background-color: greenyellow;
 }
+
 button{
-  background-color: #fff;
-  border: 0 solid #e2e8f0;
-  border-radius: 1.5rem;
-  box-sizing: border-box;
-  color: #0d172a;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 1;
-  padding: 1rem 1.6rem;
+  height: 50px;
+  font-size: 20px;
+  line-height: 25px;
+  background-color: #fcfcfc;
+  border: 0;
+  border-radius: 30px;
+  color: #303030;
+  padding: 0 20px;
   text-align: center;
-  text-decoration: none #0d172a solid;
-  text-decoration-thickness: auto;
   transition: all .1s cubic-bezier(.4, 0, .2, 1);
-  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  box-shadow: 0px 2px 5px rgb(230, 230, 230);
 }
 
 button:hover {
-  background-color: #1e293b;
-  color: #fff;
-}
-
-@media (min-width: 768px) {
-  button {
-    font-size: 1.125rem;
-    padding: 1rem 2rem;
-  }
+  background-color: #303030;
+  color: #ffffff;
 }

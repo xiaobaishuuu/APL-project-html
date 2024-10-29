@@ -65,7 +65,6 @@ export default function Game(){
                     <Card {...card}
                     isMatched={matchedEmojis.includes(card.emoji)}
                     isFlipped={flippedCards.includes(card)}
-                    flippedCards = {flippedCards}
                     onClick={() => checkCard(card)}/>
                 ))}
             </div>

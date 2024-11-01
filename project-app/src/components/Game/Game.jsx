@@ -33,6 +33,10 @@ const setDeck = (columns,theme = '') =>{       // write a shuffle func for (newC
         const emoji = String.fromCodePoint(0x1f601 + i);
         newCards.push({key:nanoid(),emoji},{key:nanoid(),emoji});
     }
+    for (let i = 0; i < newCards.length; i++) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newCards[i], newCards[j]] = [newCards[j], newCards[i]];
+    }
     return newCards
 }
 export default function Game(){

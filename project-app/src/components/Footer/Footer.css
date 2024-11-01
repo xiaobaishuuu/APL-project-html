@@ -1,0 +1,35 @@
+footer{
+    place-items: center;
+}
+
+h2{
+    /* margin-top: 30px;
+    margin-left: 240px; */
+    width: 60%;
+    margin: auto;
+    
+}
+
+ol{
+    width: 60%;
+    margin: auto;
+}
+li{
+    width: 90%;
+    margin: auto;
+}
+
+.aboutus{
+    width: 60%;
+    margin: auto;
+}
+
+.end{
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    line-height: 70px;
+    font-size: medium;
+}

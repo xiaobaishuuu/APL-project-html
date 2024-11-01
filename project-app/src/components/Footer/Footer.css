@@ -1,35 +1,30 @@
-footer{
-    place-items: center;
-}
-
-h2{
-    /* margin-top: 30px;
-    margin-left: 240px; */
-    width: 60%;
-    margin: auto;
-    
-}
-
-ol{
+.guide{
     width: 60%;
     margin: auto;
 }
-li{
-    width: 90%;
-    margin: auto;
+
+footer h1{
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    line-height: 70px;
+    font-size: medium;
+    margin: 20px 0;
+}
+
+footer h2{
+    margin: 20px 0;
+}
+
+footer li{
+    margin-left: 50px;
 }
 
 .aboutus{
     width: 60%;
     margin: auto;
 }
-
-.end{
-    margin-left: 20%;
-    margin-right: 20%;
-    background-color: #333333;
-    color: #ffffff;
-    text-align: center;
-    line-height: 70px;
-    font-size: medium;
+.aboutus span{
+    margin: 20px 0;
 }
+

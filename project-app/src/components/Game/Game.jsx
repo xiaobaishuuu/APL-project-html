@@ -58,6 +58,12 @@ export default function Game(){
                 if (newFlippedCards[0].emoji === newFlippedCards[1].emoji) {
                     setMatchedEmojis((emojis) => [newFlippedCards[0].emoji,...emojis])
                 }setFlippedCards([])}, 500)
+                console.log(matchedEmojis.length,cards.length/2)
+                if (matchedEmojis.length +1== cards.length/2){
+                    setTimeout(()=> {
+                        alert('you win');
+                        difficultyGetter(5)},1000)
+                }
             }
         }
     }

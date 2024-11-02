@@ -23,11 +23,11 @@ main {
 
 .card {
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 1; /* 1:1 */
   border-radius: 30px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* change emoji's x axis*/
+  align-items: center; /* change emoji's y axis*/
   background-color: rgb(175, 175, 175);
   font-size: 5cqw;
   transform-style: preserve-3d; /* 设置3D卡牌旋转可见 */
